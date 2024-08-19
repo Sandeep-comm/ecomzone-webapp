@@ -1,0 +1,18 @@
+body, h1 {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .app-header {
+    background: #333333c7; /* Dark background for contrast */
+    color: #fff;      /* White text color */
+    text-align: center; /* Center align the text */
+    padding: 20px;   /* Padding around the text */
+  }
+
+  .app-header h1 {
+    font-size: 36px;  /* Font size for the heading */
+    margin: 0;        /* Remove default margin */
+    font-family: 'Arial', sans-serif; /* Font family */
+  }

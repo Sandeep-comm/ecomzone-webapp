@@ -1,0 +1,17 @@
+<!-- dashboard.component.html -->
+<div class="dashboard-container">
+  <h2>All Products</h2>
+  <div class="products-container">
+    <div class="products-grid">
+      <div *ngFor="let product of allProducts" class="product-card">
+        <img [src]="'assets' + product.image" alt="{{ product.name }}" class="product-image" />
+        <h4>{{ product.name }}</h4>
+        <p>{{ product.description }}</p>
+        <p class="product-price">${{ product.price }}</p>
+        <button >Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  

@@ -1,7 +1,12 @@
 <div class="app-header">
   <h1>EcomZone</h1>
+  
+  <a *ngIf="!isLoggedIn" routerLink="/login" class="login-link">Login</a>
+  <a *ngIf="isLoggedIn" (click)="logout()" class="logout-button">Logout</a>
+
+  <a *ngIf="isLoggedIn" routerLink="/account" class="account-link">Account</a>
 </div>
 
-<app-dashboard></app-dashboard>
 
 
+<router-outlet></router-outlet>

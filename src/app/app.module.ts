@@ -7,12 +7,16 @@ import {  HttpClient, HttpClientModule, provideHttpClient, withFetch } from '@an
 import { GraphQLModule } from './graphql.module';
 import {FormsModule} from '@angular/forms'
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { LoginComponent } from './login/login.component';
+import { LoginService } from './service/login.service';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent
+    DashboardComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -22,9 +26,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     FormsModule,
     GraphQLModule,
   
+  
     
   ],
-  providers: [
+  providers: [LoginService,
     {
       provide: HttpClientModule,
       useFactory: () => provideHttpClient(withFetch()) // Enable fetch API for HttpClient

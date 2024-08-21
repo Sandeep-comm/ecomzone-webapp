@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { gql,Apollo } from 'apollo-angular';
 import { Users } from './models/Users';
+import { LoginService } from './service/login.service';
+import { Router } from '@angular/router';
 
 const Get_Users =gql`query{
   getUsers{
@@ -17,15 +19,21 @@ const Get_Users =gql`query{
 })
 export class AppComponent  implements OnInit {
   title = 'ecomzone-webapp';
-  allUsers:Users[] = [];
+  isLoggedIn: boolean = false;
+  
 
-  constructor(private apollo:Apollo){}
+  constructor(private loginService: LoginService, private router: Router){
+   
+  }
   ngOnInit(): void {
-    this.apollo.watchQuery<any>({
-      query: Get_Users
-    }).valueChanges.subscribe(({data,loading})=>{
-     console.log(loading);
-     this.allUsers = data.getUsers;
-    })
+    if (typeof window !== 'undefined') {
+      this.isLoggedIn = this.loginService.isLoggedIn();
+    }
+  }
+  
+
+  logout() {
+    this.loginService.logout();
+    window.location.href = '/login'; // Redirect to login page
   }
 }

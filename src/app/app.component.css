@@ -16,3 +16,45 @@ body, h1 {
     margin: 0;        /* Remove default margin */
     font-family: 'Arial', sans-serif; /* Font family */
   }
+  .login-link {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.2s;
+  }
+  
+  .login-link:hover {
+    background-color: #0056b3;
+  }
+  .logout-button {
+    background-color: #28a745; /* Green background for the logout button */
+    color: #fff; /* White text color */
+    border: none; /* Remove default border */
+    padding: 10px 20px; /* Add padding for a better look */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    position: absolute; /* Positioning the button absolutely */
+    top: 10px; /* Distance from the top */
+    right: 10px; /* Distance from the right */
+  }
+  
+  .logout-button:hover {
+    background-color: #218838; /* Darker green on hover */
+  }
+  
+  .logout-button:focus {
+    outline: none; /* Remove default focus outline */
+  }
+  
+  .logout-button:active {
+    background-color: #1e7e34; /* Even darker green on click */
+  }
+  

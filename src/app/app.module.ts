@@ -9,6 +9,7 @@ import {FormsModule} from '@angular/forms'
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
 import { LoginService } from './service/login.service';
+import { AccountPageComponent } from './account-page/account-page.component';
 
 
 
@@ -16,7 +17,8 @@ import { LoginService } from './service/login.service';
   declarations: [
     AppComponent,
     DashboardComponent,
-    LoginComponent
+    LoginComponent,
+    AccountPageComponent
   ],
   imports: [
     BrowserModule,

@@ -8,6 +8,8 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class LoginService {
+  private username: string | null = null;
+  private password: string | null = null;
   private isLoggedInSubject = new BehaviorSubject<boolean>(false);
   constructor(private apollo: Apollo) {
     this.checkLoginStatus();
@@ -25,12 +27,28 @@ export class LoginService {
   }
 
   validateUser(username: string, password: string) {
+    this.username = username;
+    this.password = password;
     return this.apollo.query({
       query: gql`
         query {
           validateUser(username: "${username}", password: "${password}") {
             valid
             message
+            user {
+      username
+      email
+      addresses {
+        street
+        city
+        state
+        zip
+      }
+      orders {
+        totalPrice
+        orderDate
+      }
+    }
           }
         }
       `
@@ -43,5 +61,12 @@ export class LoginService {
   logout() {
     localStorage.removeItem('authToken');
     this.isLoggedInSubject.next(false);
+  }
+  getUsername(): string | null {
+    return this.username;
+  }
+
+  getPassword(): string | null {
+    return this.password;
   }
 }

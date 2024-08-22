@@ -1,12 +1,21 @@
 <div class="app-header">
   <h1>EcomZone</h1>
   
-  <a *ngIf="!isLoggedIn" routerLink="/login" class="login-link">Login</a>
-  <a *ngIf="isLoggedIn" (click)="logout()" class="logout-button">Logout</a>
-
-  <a *ngIf="isLoggedIn" routerLink="/account" class="account-link">Account</a>
+  <div class="header-links">
+    <!-- Show login link if user is not logged in -->
+    <a *ngIf="!isLoggedIn" routerLink="/login" class="login-link">Login</a>
+    
+    <!-- Show profile button with dropdown if user is logged in -->
+    <div *ngIf="isLoggedIn" class="profile-dropdown">
+      <button class="profile-button">
+        <img src="assets/profile-icon.png" alt="Profile" class="profile-icon">
+      </button>
+      <div class="dropdown-content">
+        <a routerLink="/account">Account</a>
+        <a (click)="logout()" class="logout-link">Logout</a>
+      </div>
+    </div>
+  </div>
 </div>
-
-
 
 <router-outlet></router-outlet>

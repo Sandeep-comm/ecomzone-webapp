@@ -18,6 +18,8 @@ export class LoginComponent {
   login() {
     this.loginService.validateUser(this.username, this.password).subscribe((result: any) => {
       if (result.data.validateUser.valid) {
+        localStorage.setItem('username', this.username);
+        localStorage.setItem('password', this.password);
         this.loginService.setToken('someAuthToken');
         window.location.href = '/dashboard'; // Redirect to dashboard
       } else {

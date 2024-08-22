@@ -1,60 +1,106 @@
 body, h1 {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  .app-header {
-    background: #333333c7; /* Dark background for contrast */
-    color: #fff;      /* White text color */
-    text-align: center; /* Center align the text */
-    padding: 20px;   /* Padding around the text */
-  }
+.app-header {
+  background: #333333c7; /* Dark background for contrast */
+  color: #fff; /* White text color */
+  text-align: center; /* Center align the text */
+  padding: 20px; /* Padding around the text */
+  position: relative; /* Relative positioning to anchor the links */
+}
 
-  .app-header h1 {
-    font-size: 36px;  /* Font size for the heading */
-    margin: 0;        /* Remove default margin */
-    font-family: 'Arial', sans-serif; /* Font family */
-  }
-  .login-link {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 4px;
-    text-decoration: none;
-    font-size: 16px;
-    transition: background-color 0.2s;
-  }
+.app-header h1 {
+  font-size: 36px; /* Font size for the heading */
+  margin: 0; /* Remove default margin */
+  font-family: 'Arial', sans-serif; /* Font family */
+}
+
+.header-links {
+  position: absolute; /* Position the links absolutely */
+  top: 10px; /* Distance from the top */
+  right: 10px; /* Distance from the right */
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between items */
+}
+
+.login-link {
+  color: #007bff;
+  text-decoration: none;
+  padding: 8px 16px;
+  border: 2px solid #007bff;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.login-link:hover {
+  background-color: #007bff; /* Blue background on hover */
+  color: white; /* White text on hover */
+}
+
+.profile-dropdown {
+  position: relative; /* Positioning relative for dropdown content */
+}
+
+.profile-button {
+  background: linear-gradient(135deg, #4CAF50, #81C784); /* Gradient background for modern look */
+  color: white; /* White text color */
+  padding: 8px 16px; /* Padding for button */
+  border: 2px solid #4CAF50; /* Border matching the gradient */
+  border-radius: 50%; /* Round button */
+  cursor: pointer; /* Pointer cursor on hover */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-icon {
+  width: 24px; /* Adjust icon size */
+  height: 24px;
+}
+
+.dropdown-content {
+  display: none; /* Hidden by default */
+  position: absolute; /* Position relative to the dropdown button */
+  background-color: #ffffff; /* Background for dropdown */
+  min-width: 160px; /* Minimum width for the dropdown */
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Shadow effect */
+  z-index: 1; /* Ensure dropdown is on top */
+  top: 100%; /* Position below the profile button */
+  right: 0; /* Align dropdown content to the right edge */
+  border: 1px solid #ddd; /* Border around dropdown */
+  border-radius: 4px; /* Rounded corners */
+}
+
+.dropdown-content a {
+  color: black; /* Text color */
+  padding: 12px 16px; /* Padding inside dropdown links */
+  text-decoration: none; /* Remove underline */
+  display: block; /* Display block for full-width clickable links */
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1; /* Background on hover */
+}
+
+.profile-dropdown:hover .dropdown-content {
+  display: block; /* Show dropdown on hover */
+}
+.logout-link {
+  color: #28a745; /* Green text color */
+  text-decoration: none; /* Remove underline */
+  padding: 8px 16px; /* Padding inside the link */
   
-  .login-link:hover {
-    background-color: #0056b3;
-  }
-  .logout-button {
-    background-color: #28a745; /* Green background for the logout button */
-    color: #fff; /* White text color */
-    border: none; /* Remove default border */
-    padding: 10px 20px; /* Add padding for a better look */
-    border-radius: 4px; /* Rounded corners */
-    font-size: 16px; /* Font size */
-    cursor: pointer; /* Change cursor to pointer on hover */
-    transition: background-color 0.3s ease; /* Smooth transition for background color */
-    position: absolute; /* Positioning the button absolutely */
-    top: 10px; /* Distance from the top */
-    right: 10px; /* Distance from the right */
-  }
-  
-  .logout-button:hover {
-    background-color: #218838; /* Darker green on hover */
-  }
-  
-  .logout-button:focus {
-    outline: none; /* Remove default focus outline */
-  }
-  
-  .logout-button:active {
-    background-color: #1e7e34; /* Even darker green on click */
-  }
-  
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+}
+
+.logout-link:hover {
+  background-color: #218838; /* Darker green background on hover */
+  color: white; /* White text on hover */
+}

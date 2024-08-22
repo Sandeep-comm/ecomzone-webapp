@@ -32,8 +32,12 @@ export class AppComponent  implements OnInit {
   }
   
 
+  
   logout() {
-    this.loginService.logout();
-    window.location.href = '/login'; // Redirect to login page
+    this.loginService.logout(); // Perform logout
+    this.isLoggedIn = false; // Update the login status
+    // Redirect to login page
+    this.router.navigate(['/login']);
   }
+  
 }

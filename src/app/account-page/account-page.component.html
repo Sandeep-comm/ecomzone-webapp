@@ -1,0 +1,22 @@
+<div class="account-container">
+  <h1>Hello, {{ username }}</h1>
+  <div *ngIf="username && email">
+    <h2>User Details</h2>
+    <p>Username: {{ username }}</p>
+    <p>Email: {{ email }}</p>
+
+    <div class="section-title">Addresses</div>
+    <ul>
+      <li *ngFor="let address of addresses">
+        {{ address.street }}, {{ address.city }}, {{ address.state }}, {{ address.zip }}
+      </li>
+    </ul>
+
+    <div class="section-title">Orders</div>
+    <ul>
+      <li *ngFor="let order of orders">
+        Total Price: {{ order.totalPrice }}, Order Date: {{ order.orderDate }}
+      </li>
+    </ul>
+  </div>
+</div>

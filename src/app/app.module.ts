@@ -10,6 +10,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
 import { LoginService } from './service/login.service';
 import { AccountPageComponent } from './account-page/account-page.component';
+import { RegisterComponent } from './register/register.component';
 
 
 
@@ -18,7 +19,8 @@ import { AccountPageComponent } from './account-page/account-page.component';
     AppComponent,
     DashboardComponent,
     LoginComponent,
-    AccountPageComponent
+    AccountPageComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

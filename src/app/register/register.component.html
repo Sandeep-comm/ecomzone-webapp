@@ -1,0 +1,38 @@
+<div class="register-container">
+  <h3>Register</h3>
+  <form (ngSubmit)="register(registerForm)" #registerForm="ngForm" class="register-form">
+    <label for="username">Username:</label>
+    <input type="text" id="username" [(ngModel)]="username" name="username" required>
+    <div *ngIf="!username && registerForm.submitted" class="error-message">
+      Username is required.
+    </div>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" [(ngModel)]="password" name="password" required>
+    <div *ngIf="!password && registerForm.submitted" class="error-message">
+      Password is required.
+    </div>
+
+    <label for="confirmPassword">Confirm Password:</label>
+    <input type="password" id="confirmPassword" [(ngModel)]="confirmPassword" name="confirmPassword" required>
+    <div *ngIf="passwordMismatch && registerForm.submitted" class="error-message">
+      Passwords do not match.
+    </div>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" [(ngModel)]="email" name="email" required>
+    <div *ngIf="!email && registerForm.submitted" class="error-message">
+      Email is required.
+    </div>
+
+    <label for="roleId">Role ID:</label>
+    <input type="text" id="roleId" [(ngModel)]="roleId" name="roleId" required
+           pattern="^[4-6]$" title="Role ID must be between 4 and 6">
+
+    <div *ngIf="errorMessage" class="error-message">
+      {{ errorMessage }}
+    </div>
+
+    <button type="submit" [disabled]="!registerForm.valid">Register</button>
+  </form>
+</div>

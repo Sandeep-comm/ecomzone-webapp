@@ -1,6 +1,5 @@
 <div class="app-header">
-  <h1>EcomZone</h1>
-  
+  <h1 [routerLink]="['/dashboard']" class="clickable-title">EcomZone</h1>  
   <div class="header-links">
     <!-- Show login link if user is not logged in -->
     <a *ngIf="!isLoggedIn" routerLink="/login" class="login-link">Login</a>

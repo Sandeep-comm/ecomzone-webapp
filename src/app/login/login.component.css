@@ -1,50 +1,72 @@
 .login-container {
-    padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    width: 300px;
-    margin: 20px auto;
-  }
-  
-  .login-container h3 {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
-  .login-form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .login-form label {
-    margin-bottom: 5px;
-    font-size: 14px;
-    color: #666;
-  }
-  
-  .login-form input {
-    margin-bottom: 15px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-  }
-  
-  .login-form button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.2s;
-  }
-  
-  .login-form button:hover {
-    background-color: #0056b3;
-  }
-  
+  padding: 30px;
+  background-color: #fff5e6; /* Light peach background */
+  border: 1px solid #ffd1a1; /* Peach border */
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  width: 350px; /* Adjust width */
+  margin: 40px auto; /* Centered with margin */
+}
+
+.login-container h3 {
+  font-size: 28px;
+  color: #4a4a4a; /* Soft dark grey */
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+  letter-spacing: 1px; /* Slight spacing for a modern look */
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form label {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #666; /* Darker text */
+}
+
+.login-form input {
+  margin-bottom: 20px; /* Increased margin for better spacing */
+  padding: 12px;
+  border: 1px solid #ffd1a1; /* Peach border */
+  border-radius: 8px; /* Rounded corners */
+  font-size: 16px;
+  color: #333; /* Dark text for better readability */
+}
+
+.login-form button {
+  background-color: #ff7f50; /* Peach background */
+  color: #fff; /* White text for contrast */
+  border: none;
+  padding: 12px;
+  border-radius: 30px; /* Rounded button */
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.login-form button:hover {
+  background-color: #e6734b; /* Darker peach on hover */
+}
+
+.error-message {
+  color: #ff4c4c; /* Red color for error messages */
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+a {
+  color: #ff7f50; /* Peach color for links */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline; /* Underline on hover */
+}

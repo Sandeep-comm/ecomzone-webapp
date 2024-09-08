@@ -1,15 +1,20 @@
 .register-container {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  background-color: #fff5e6; /* Light peach background */
+  border: 1px solid #ffd1a1; /* Peach border */
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  max-width: 400px; /* Adjust width */
+  margin: 40px auto; /* Centered with margin */
 }
 
-h3 {
-  margin-bottom: 20px;
+.register-container h3 {
+  font-size: 28px;
+  color: #4a4a4a; /* Soft dark grey */
   text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+  letter-spacing: 1px; /* Slight spacing for a modern look */
 }
 
 .register-form {
@@ -17,35 +22,50 @@ h3 {
   flex-direction: column;
 }
 
-label {
-  margin-bottom: 5px;
-  font-weight: bold;
+.register-form label {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #666; /* Darker text */
 }
 
-input {
-  margin-bottom: 15px;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+.register-form input {
+  margin-bottom: 20px; /* Increased margin for better spacing */
+  padding: 12px;
+  border: 1px solid #ffd1a1; /* Peach border */
+  border-radius: 8px; /* Rounded corners */
+  font-size: 16px;
+  color: #333; /* Dark text for better readability */
 }
 
 .error-message {
-  color: red;
-  font-size: 0.875em;
+  color: #ff4c4c; /* Red color for error messages */
   margin-bottom: 15px;
 }
 
 button {
-  padding: 10px;
+  background-color: #ff7f50; /* Peach background */
+  color: #fff; /* White text for contrast */
   border: none;
-  background-color: #007bff;
-  color: white;
-  font-size: 16px;
-  border-radius: 4px;
+  padding: 12px;
+  border-radius: 30px; /* Rounded button */
   cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease; /* Smooth transition */
 }
 
-button:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
+button:hover {
+  background-color: #e6734b; /* Darker peach on hover */
+}
+
+p {
+  text-align: center;
+}
+
+a {
+  color: #ff7f50; /* Peach color for links */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline; /* Underline on hover */
 }
